@@ -1,0 +1,66 @@
+body {
+  background-color: #f9fbe7;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 20px;
+}
+
+.game-area {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  margin: auto;
+  background: #dcedc8;
+  border: 2px solid #558b2f;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.fighter {
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+  width: 70px;
+  height: 120px;
+  background: #c62828;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.person {
+  position: absolute;
+  bottom: 10px;
+  width: 50px;
+  height: 100px;
+  background: #1976d2;
+  border-radius: 5px;
+  animation: movePerson 8s linear forwards;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+}
+
+.dead {
+  transform: rotate(90deg);
+  background-color: gray !important;
+  transition: transform 0.5s ease;
+}
+
+@keyframes movePerson {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
